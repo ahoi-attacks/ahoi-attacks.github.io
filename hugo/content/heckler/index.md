@@ -23,7 +23,7 @@ seo:
    <img src="/Heckler-symbol.svg" class='' style='margin-top: 2rem; margin-bottom: -1rem; width: 300px;'>
 </div>
 <h1 class='h1'>Heckler</h1>
-<p class="lead">Breaking Confidential VMs with Malicious Interrupts (to appear at <a href='https://www.usenix.org/conference/usenixsecurity24'>USENIX Security 2024</a>)</p>
+<p class="lead">Breaking Confidential VMs with Malicious Interrupts<br>(to appear at <a href='https://www.usenix.org/conference/usenixsecurity24'>USENIX Security 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
@@ -95,7 +95,7 @@ In the Animation below, the function updates the mean of a data set when new dat
 
 ![Heckler Signals](heckler-signals.webp)
 
-## Case Studies
+## Breaking into CVMs with Heckler
 ### OpenSSH
 Using Heckler, we attack OpenSSH `v9.4.P1+` to compromise its authentication and
 get a shell on the CVM. Without Heckler, the attacker is not authorized to get a
@@ -171,14 +171,13 @@ filters any malicious interrupt injections from other VMs.
 
 
 {{< details "Q: How do I protect myself from Heckler?" >}}
-- Heckler is tracked under 2 CVEs: (see [CVE section](#cve)).
+- Heckler is tracked under 2 [CVEs](#cve): [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744) and [CVE-2024-25743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25743)
 - For Intel TDX, there are [patches](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f4116bfc44621882556bbf70f5284fbf429a5cf6) to the Linux kernel that check if `int 0x80` is externally injected. TDX is not vulnerable to the attack from signals as the hardware blocks external injection of interrupts between 0-30. 
-
 - For AMD SEV-SNP, [turn off x86 emulation in the Linux
   kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b82a8dbd3d2f4563156f7150c6f2ecab6e960b30)
   which will prevent Heckler from using the effects of the `int 0x80` handler.
-  Currently, there is no fix to protect against Heckler’s signal attacks. For
-  robust defense, we recommend that cloud users switch to protected interrupt
+  Currently, there is no fix to protect against Heckler’s signal attacks. 
+- For robust defense, we recommend that cloud users switch to protected interrupt
   delivery available on AMD SEV-SNP. Unfortunately, as of 4th April 2024, there
   is no software support to use this hardware feature in neither mainline Linux
   nor AMD prototype.
@@ -223,7 +222,7 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 {{< details "Q: What was the response from cloud vendors? " >}}
 
-- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and __Azure ???__ are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
+- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and Azure confidential VMs are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
 
 - Google and AWS thanked us for the disclosure and are investigating it. At the
   moment, they have neither confirmed nor denied the issue.
@@ -244,7 +243,7 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 We informed Intel and AMD about int 0x80 on the 27th and 28th September 2023
 respectively. We updated AMD on 14th October 2023 about our findings for other
-interrupts and our analysis of their defenses.
+interrupts and our analysis of their defenses. At the request of AMD, we extended the embargo till 4 April 2024.
 
 ## CVE
 

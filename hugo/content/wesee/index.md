@@ -25,7 +25,7 @@ seo:
    <!-- <img src="/heckler.png" class='w-10' style='margin-bottom: -1rem'> -->
 </div>
 <h1 class='h1'>WeSee</h1>
-<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP (to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
+<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP<br>(to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
@@ -98,7 +98,7 @@ Like the read memory primitive, the hypervisor can use `exit_reason=mmio_read` w
 To inject code to be executed in the kernel, we need to write to the `.text` section. By default, the kernel sets up its page tables such that the `.text` section is executable but not writable. To get around this constraint, we first use our read and write memory primitives to change the permissions in the kernel page tables. Specifically, we locate the page tables in kernel memory and then use the read memory primitive to perform a page table walk and the write memory primitive to edit the page permissions. Once all the permissions are changed, our target page is writable. 
 Finally, we can write shell code using a chain of write memory primitives to the target page.  
 
-## Case Studies
+## Breaking into CVMs with WeSee
 We demonstrate the expressive power of WeSee with three end-to-end case studies. 
 We leak kernel TLS session keys for NGINX with the arbitrary read.  We use arbitrary write and code injection primitives to disable firewall rules and open a root shell. Next, we explain how we gain the root shell.
 
@@ -125,6 +125,7 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
 {{< /details >}}
 
 {{< details "Q: How do I protect myself from WeSee?" >}} 
+  - WeSee is tracked under one [CVE](#cve): [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742)
   - Upgrade the [Linux kernel](https://lore.kernel.org/lkml/20240311151909.GAZe8g7SqDKRcP4XrO@fat_crate.local/) and use [hardware features](https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/solution-briefs/amd-secure-encrypted-virtualization-solution-brief.pdf). 
   - Unfortunately, as of 4th April 2024, there is no software support to use this hardware feature in neither mainline Linux nor AMD prototype.
 {{< /details >}}
@@ -152,7 +153,7 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
 - [Shweta Shinde](https://shwetashinde.com)
   
 ## Responsible Disclosure
-We have responsibly disclosed our findings to AMD on 26 October 2023.
+We have responsibly disclosed our findings to AMD on 26 October 2023. At the request of AMD, we extended the embargo till 4 April 2024.
 
 ## CVE
 WeSee is tracked under [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742).
