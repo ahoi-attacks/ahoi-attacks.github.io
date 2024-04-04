@@ -45,13 +45,13 @@ seo:
 
 
 
-## How Does It Work?  
+## How Does It Work?
 AMD SEV-SNP and Intel TDX enable Confidential VMs (CVMs). With these CVMs, the
 untrusted hypervisor is still responsible for resource and configuration
 management. Consequently, the hypervisor also manages interrupts for CVMs. In
 Heckler, the hypervisor uses malicious interrupts to compromise the security of
-the CVMs. Our insight is to use the [interrupt handlers](/blog/ahoi-overview/)
-that have [global effects](/blog/ahoi-overview/), such that we can manipulate a
+the CVMs. Our insight is to use the [interrupt handlers](/blog/ahoi-overview/#interrupt-delivery-to-confidential-vms)
+that have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers), such that we can manipulate a
 CVM’s register states to change the data and control flow. Let’s first look at
 how interrupts are handled during a benign execution. The hypervisor hooks on
 physical interrupts from the interrupt controller and sends them to the CVMs.
@@ -84,18 +84,18 @@ malicious hypervisor to bypass authentication checks (e.g., OpenSSH, sudo).
 ### Signals
 The OS converts different hardware exceptions to signals that are delivered to
 user-space applications. The applications register signal handlers which can
-have [global effects](/blog/ahoi-overview). In AMD SEV-SNP, the hardware
+have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers). In AMD SEV-SNP, the hardware
 exceptions are mapped to interrupt numbers that a malicious hypervisor can
 inject. These malicious interrupts trick the OS into sending a signal to the
 user-space application. Depending on the effects application’s signal handler,
 this malicious interrupt injection can be used to compromise the security of the
 CVM.
 
-In the Animation below, the function updates the mean of a data set when new data is added to it. Crucially, in a signal handler, the application discards any faulty data (e.g., data that overflows the mean) and reverts the mean. An attacker can bias this data set by using Heckler.  
+In the Animation below, the function updates the mean of a data set when new data is added to it. Crucially, in a signal handler, the application discards any faulty data (e.g., data that overflows the mean) and reverts the mean. An attacker can bias this data set by using Heckler.
 
 ![Heckler Signals](heckler-signals.webp)
 
-## Case Studies
+## Breaking into CVMs with Heckler
 ### OpenSSH
 Using Heckler, we attack OpenSSH `v9.4.P1+` to compromise its authentication and
 get a shell on the CVM. Without Heckler, the attacker is not authorized to get a
@@ -117,10 +117,10 @@ the interrupt, we use the hypervisor’s ability to observe page faults.
 
 ### Sudo
 
-We demonstrate an attack on the sudo binary in the Ubuntu 23.10 distribution to get a root shell on the CVM. Specifically, an attacker with a non-root shell on the CVM can escalate privilege to a root shell using Heckler. 
+We demonstrate an attack on the sudo binary in the Ubuntu 23.10 distribution to get a root shell on the CVM. Specifically, an attacker with a non-root shell on the CVM can escalate privilege to a root shell using Heckler.
 
 
-Like the OpenSSH attack, we identify functions that lie on different pages. We observe the page trace in the hypervisor and use int 0x80 to compromise the return values leading to successful authentication. 
+Like the OpenSSH attack, we identify functions that lie on different pages. We observe the page trace in the hypervisor and use int 0x80 to compromise the return values leading to successful authentication.
 
 
 <iframe width="100%" height="515" style='margin-top: 2rem; margin-bottom: 2rem;'
@@ -130,7 +130,7 @@ clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In summary, a malicious hypervisor can use Heckler to gain access to a shell (using the OpenSSH attack) on the CVM and escalate privilege to a root shell (using the sudo attack). Further, Heckler can be used to compromise victim applications by sending arbitrary signals. For more details, please see our [paper](/heckler/heckler_usenix24.pdf) and our [code](https://github.com/ahoi-attacks). 
+In summary, a malicious hypervisor can use Heckler to gain access to a shell (using the OpenSSH attack) on the CVM and escalate privilege to a root shell (using the sudo attack). Further, Heckler can be used to compromise victim applications by sending arbitrary signals. For more details, please see our [paper](/heckler/heckler_usenix24.pdf) and our [code](https://github.com/ahoi-attacks).
 
 
 ## Affected Hardware and Software
@@ -171,14 +171,14 @@ filters any malicious interrupt injections from other VMs.
 
 
 {{< details "Q: How do I protect myself from Heckler?" >}}
-- Heckler is tracked under 2 CVEs: (see [CVE section](#cve)).
-- For Intel TDX, there are [patches](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f4116bfc44621882556bbf70f5284fbf429a5cf6) to the Linux kernel that check if `int 0x80` is externally injected. TDX is not vulnerable to the attack from signals as the hardware blocks external injection of interrupts between 0-30. 
+- Heckler is tracked under 2 [CVEs](#cve): [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744) and [CVE-2024-25743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25743)
+- For Intel TDX, there are [patches](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f4116bfc44621882556bbf70f5284fbf429a5cf6) to the Linux kernel that check if `int 0x80` is externally injected. TDX is not vulnerable to the attack from signals as the hardware blocks external injection of interrupts between 0-30.
 
 - For AMD SEV-SNP, [turn off x86 emulation in the Linux
   kernel](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b82a8dbd3d2f4563156f7150c6f2ecab6e960b30)
   which will prevent Heckler from using the effects of the `int 0x80` handler.
-  Currently, there is no fix to protect against Heckler’s signal attacks. For
-  robust defense, we recommend that cloud users switch to protected interrupt
+  Currently, there is no fix to protect against Heckler’s signal attacks.
+- For robust defense, we recommend that cloud users switch to protected interrupt
   delivery available on AMD SEV-SNP. Unfortunately, as of 4th April 2024, there
   is no software support to use this hardware feature in neither mainline Linux
   nor AMD prototype.
@@ -188,7 +188,7 @@ filters any malicious interrupt injections from other VMs.
 
 
 {{< details "Q: Is this a side-channel attack?" >}}
-- No. Heckler is not a side-channel attack. 
+- No. Heckler is not a side-channel attack.
 {{< /details >}}
 
 
@@ -201,7 +201,7 @@ detailed analysis of the other interrupt vectors.
 
 
 {{< details "Q: How is this an Ahoi attack?" >}}
-- Heckler abuses interrupts, a notification mechanism, to compromise CVMs making it an Ahoi attack. 
+- Heckler abuses interrupts, a notification mechanism, to compromise CVMs making it an Ahoi attack.
 {{< /details >}}
 
 
@@ -223,7 +223,7 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 {{< details "Q: What was the response from cloud vendors? " >}}
 
-- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and __Azure ???__ are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
+- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and Azure confidential VMs are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
 
 - Google and AWS thanked us for the disclosure and are investigating it. At the
   moment, they have neither confirmed nor denied the issue.
@@ -244,7 +244,7 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 We informed Intel and AMD about int 0x80 on the 27th and 28th September 2023
 respectively. We updated AMD on 14th October 2023 about our findings for other
-interrupts and our analysis of their defenses.
+interrupts and our analysis of their defenses. At the request of AMD, we extended the embargo till 4 April 2024.
 
 ## CVE
 
