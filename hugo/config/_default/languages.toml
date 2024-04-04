@@ -1,0 +1,9 @@
+[en]
+  languageName = "English"
+  contentDir = "content/en"
+  weight = 10
+  [en.params]
+    languageISO = "EN"
+    languageTag = "en-US"
+    footer = '<a class="text-muted" href="">Secure and Trustworthy Systems Group, ETH Zurich</a>'
+    alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/embargo">April 4th - Embargo is over. We are live.</a>'
