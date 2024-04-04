@@ -161,6 +161,3 @@ We have responsibly disclosed our findings to AMD on 26 October 2023.
 WeSee is tracked under [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742).
 
 
-## Acknowledgments
-Thanks to AMD and Linux for the mitigation discussions and for
-developing the patches.
