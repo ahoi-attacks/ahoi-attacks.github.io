@@ -50,8 +50,8 @@ AMD SEV-SNP and Intel TDX enable Confidential VMs (CVMs). With these CVMs, the
 untrusted hypervisor is still responsible for resource and configuration
 management. Consequently, the hypervisor also manages interrupts for CVMs. In
 Heckler, the hypervisor uses malicious interrupts to compromise the security of
-the CVMs. Our insight is to use the [interrupt handlers](/blog/ahoi-overview/)
-that have [global effects](/blog/ahoi-overview/), such that we can manipulate a
+the CVMs. Our insight is to use the [interrupt handlers](/blog/ahoi-overview/#interrupt-delivery-to-confidential-vms)
+that have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers), such that we can manipulate a
 CVM’s register states to change the data and control flow. Let’s first look at
 how interrupts are handled during a benign execution. The hypervisor hooks on
 physical interrupts from the interrupt controller and sends them to the CVMs.
@@ -84,7 +84,7 @@ malicious hypervisor to bypass authentication checks (e.g., OpenSSH, sudo).
 ### Signals
 The OS converts different hardware exceptions to signals that are delivered to
 user-space applications. The applications register signal handlers which can
-have [global effects](/blog/ahoi-overview). In AMD SEV-SNP, the hardware
+have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers). In AMD SEV-SNP, the hardware
 exceptions are mapped to interrupt numbers that a malicious hypervisor can
 inject. These malicious interrupts trick the OS into sending a signal to the
 user-space application. Depending on the effects application’s signal handler,
