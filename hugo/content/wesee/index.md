@@ -117,7 +117,7 @@ We inject our shell code into the Linux kernel’s function that receives and ha
 style='margin-top: 2rem; margin-bottom: 2rem;'
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In summary, a malicious hypervisor can use WeSee to compromise SEV-SNP VMs and gain root access. For more details on our attacks check out our [paper]([link](https://ahoi-attacks.github.io/wesee/wesee_oakland24.pdf)) and [code](https://github.com/ahoi-attacks/WeSee).
+In summary, a malicious hypervisor can use WeSee to compromise SEV-SNP VMs and gain root access. For more details on our attacks check out our [paper](/wesee/wesee_oakland24.pdf) and [code](https://github.com/ahoi-attacks/WeSee).
 
 ## Affected Hardware and Software
 All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux kernel that mitigates our case study attacks. See FAQs for more information.

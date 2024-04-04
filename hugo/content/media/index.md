@@ -1,6 +1,7 @@
 ---
 title: "Media Coverage"
 description: "Ahoi Attacks"
+toc: false
 ---
 ## Internet Coverage
 

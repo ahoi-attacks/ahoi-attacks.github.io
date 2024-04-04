@@ -1,6 +1,7 @@
 ---
 title: "Imprint"
 description: "Ahoi Attacks"
+toc: false
 ---
 
 ## Imprint

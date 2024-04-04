@@ -51,7 +51,7 @@ untrusted hypervisor is still responsible for resource and configuration
 management. Consequently, the hypervisor also manages interrupts for CVMs. In
 Heckler, the hypervisor uses malicious interrupts to compromise the security of
 the CVMs. Our insight is to use the [interrupt handlers](/blog/ahoi-overview/#interrupt-delivery-to-confidential-vms)
-that have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers), such that we can manipulate a
+that have [global effects](/blog/ahoi-overview/#exploiting-global-effects-of-handlers), such that we can manipulate a
 CVM’s register states to change the data and control flow. Let’s first look at
 how interrupts are handled during a benign execution. The hypervisor hooks on
 physical interrupts from the interrupt controller and sends them to the CVMs.
@@ -84,7 +84,7 @@ malicious hypervisor to bypass authentication checks (e.g., OpenSSH, sudo).
 ### Signals
 The OS converts different hardware exceptions to signals that are delivered to
 user-space applications. The applications register signal handlers which can
-have [global effects](blog/ahoi-overview/#exploiting-global-effects-of-handlers). In AMD SEV-SNP, the hardware
+have [global effects](/blog/ahoi-overview/#exploiting-global-effects-of-handlers). In AMD SEV-SNP, the hardware
 exceptions are mapped to interrupt numbers that a malicious hypervisor can
 inject. These malicious interrupts trick the OS into sending a signal to the
 user-space application. Depending on the effects application’s signal handler,
@@ -215,7 +215,8 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 {{< details "Q: What was the response from hardware manufacturers? " >}}
 
-- Intel and AMD acknowledged the attacks but concluded that this is a vulnerability in the third-party software implementations of SEV-SNP and TDX.
+- Intel and AMD acknowledged the attacks but concluded that this is a
+  vulnerability in the third-party software implementations of SEV-SNP and TDX.
 
 {{< /details >}}
 
@@ -223,7 +224,9 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 {{< details "Q: What was the response from cloud vendors? " >}}
 
-- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and Azure confidential VMs are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
+- Azure thanked us for the disclosure and communicated that both Azure
+  Confidential Computing and Azure confidential VMs are not vulnerable because
+  they use restricted and alternate injection modes supported by AMD SEV-SNP.
 
 - Google and AWS thanked us for the disclosure and are investigating it. At the
   moment, they have neither confirmed nor denied the issue.
@@ -244,7 +247,8 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 We informed Intel and AMD about int 0x80 on the 27th and 28th September 2023
 respectively. We updated AMD on 14th October 2023 about our findings for other
-interrupts and our analysis of their defenses. At the request of AMD, we extended the embargo till 4 April 2024.
+interrupts and our analysis of their defenses. At the request of AMD, we
+extended the embargo till 4 April 2024.
 
 ## CVE
 
