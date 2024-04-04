@@ -18,12 +18,12 @@ seo:
   noindex: false # false (default) or true
 ---
 
-<div class='text-center' style='padding-bottom: 1rem;'>
+<div class='text-center' style='padding-bottom: 3rem;'>
 <div>
    <img src="/Heckler-symbol.svg" class='' style='margin-top: 2rem; margin-bottom: -1rem; width: 300px;'>
 </div>
 <h1 class='h1'>Heckler</h1>
-<p class="lead">Breaking Confidential VMs with Malicious Interrupts (to appear at <a href='https://www.usenix.org/conference/usenixsecurity24'>USENIX Security 2024</a>)</p>
+<p class="lead">Breaking Confidential VMs with Malicious Interrupts </br> (to appear at <a href='https://www.usenix.org/conference/usenixsecurity24'>USENIX Security 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
@@ -32,7 +32,7 @@ seo:
   </div>
 <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row" >
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="https://github.com/ahoi-attacks" role="button">Source</a>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="https://github.com/ahoi-attacks/heckler" role="button">Source</a>
     </div>
   </div>
 <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
