@@ -1,6 +1,6 @@
 ---
 title: "Ahoi Attacks Blog"
-description: ""
+description: "Attacks to break AMD SEV-SNP and Intel TDX with malicious notifications."
 summary: ""
 date: 2024-04-01T16:21:44+02:00
 lastmod: 2024-04-01T16:21:44+02:00
