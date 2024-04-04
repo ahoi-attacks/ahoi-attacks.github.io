@@ -73,12 +73,8 @@ application checks it to successfully authenticate a user. This allows the
 malicious hypervisor to bypass authentication checks (e.g., OpenSSH, sudo).
 
 
-<div>
-<img src="/heckler/heckler-int80.webp"
- style="height: 20%; object-fit: cover; object-position: 0 0;"
->
-</div>
-<!-- ![Heckler Int80](heckler-int80.webp) -->
+
+![Heckler Int80](heckler-int80.webp)
 
 
 ### Signals
