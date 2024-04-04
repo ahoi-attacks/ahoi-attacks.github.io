@@ -232,11 +232,6 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 
 
-## Citation
-```
-
-
-```
 ## Authors
 
 - [Benedict Schlüter](https://benschlueter.com/)
