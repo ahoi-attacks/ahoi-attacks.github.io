@@ -57,7 +57,7 @@ WeSee abuses the #VC handler in the kernel to compromise the CVM with 2 main obs
 
 ### Bypass Authentication with WeSee
  Let's consider an application that writes an application key `key_app` into `rax` and then uses the value in `rax` to authenticate a user who enters an input key (`k_in`).
- ```
+ ```python
  rax = key_app
 if rax == k_in: 
 	auth
@@ -145,16 +145,16 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
 <!-- {{< details "Q: Am I affected?" >}}
 {{< /details >}} -->
 
-### Authors
+## Authors
 - [Benedict Schlüter](https://benschlueter.com/)
 - [Supraja Sridhara](https://suprajas.com/)
 - [Andrin Bertschi](https://abertschi.ch/)
 - [Shweta Shinde](https://shwetashinde.com)
-### Responsible Disclosure
+  
+## Responsible Disclosure
+We have responsibly disclosed our findings to AMD on 26 October 2023.
 
-### CVE
-
+## CVE
 WeSee is tracked under [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742).
 
-### Acknowledgments
 
