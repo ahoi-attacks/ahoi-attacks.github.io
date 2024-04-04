@@ -73,7 +73,13 @@ application checks it to successfully authenticate a user. This allows the
 malicious hypervisor to bypass authentication checks (e.g., OpenSSH, sudo).
 
 
-![Heckler Int80](heckler-int80.webp)
+<div>
+<img src="/heckler/heckler-int80.webp"
+ style="height: 20%; object-fit: cover; object-position: 0 0;"
+>
+</div>
+<!-- ![Heckler Int80](heckler-int80.webp) -->
+
 
 ### Signals
 The OS converts different hardware exceptions to signals that are delivered to
@@ -87,7 +93,7 @@ CVM.
 
 In the Animation below, the function updates the mean of a data set when new data is added to it. Crucially, in a signal handler, the application discards any faulty data (e.g., data that overflows the mean) and reverts the mean. An attacker can bias this data set by using Heckler.  
 
-INSERT ANIMATION
+![Heckler Signals](heckler-signals.webp)
 
 ## Case Studies
 ### OpenSSH
@@ -95,9 +101,10 @@ Using Heckler, we attack OpenSSH `v9.4.P1+` to compromise its authentication and
 get a shell on the CVM. Without Heckler, the attacker is not authorized to get a
 shell.
 
-INSERT ANIMATION
+![Heckler Gadgets](heckler-pages.webp)
 
-Specifically, openssh calls `mm_answer_authpassword` to decide if authentication
+
+Specifically, OpenSSH calls `mm_answer_authpassword` to decide if authentication
 is successful. We use Heckler’s `int 0x80` attack and inject an interrupt when
 this function executes to change its return value. To determine when to inject
 the interrupt, we use the hypervisor’s ability to observe page faults.
@@ -244,14 +251,14 @@ We informed Intel and AMD about int 0x80 on the 27th and 28th September 2023
 respectively. We updated AMD on 14th October 2023 about our findings for other
 interrupts and our analysis of their defenses.
 
-### CVE
+## CVE
 
 Heckler is tracked under the following CVEs:
 
 - [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744)
 - [CVE-2024-25743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25743)
 
-### Acknowledgments
+## Acknowledgments
 
 Thanks to Intel, AMD, and Linux for the mitigation discussions and for
 developing the patches. We thank Benny Fuhry and Mona Vij from Intel for
