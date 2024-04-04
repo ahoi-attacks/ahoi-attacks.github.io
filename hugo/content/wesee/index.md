@@ -145,16 +145,16 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
 <!-- {{< details "Q: Am I affected?" >}}
 {{< /details >}} -->
 
-### Authors
+## Authors
 - [Benedict Schlüter](https://benschlueter.com/)
 - [Supraja Sridhara](https://suprajas.com/)
 - [Andrin Bertschi](https://abertschi.ch/)
 - [Shweta Shinde](https://shwetashinde.com)
-### Responsible Disclosure
+  
+## Responsible Disclosure
+We have responsibly disclosed our findings to AMD on 26 October 2023.
 
-### CVE
-
+## CVE
 WeSee is tracked under [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742).
 
-### Acknowledgments
 
