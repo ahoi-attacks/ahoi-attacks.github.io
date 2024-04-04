@@ -113,7 +113,7 @@ This command spawns a root shell that takes as input all network data from port 
 
 We inject our shell code into the Linux kernel’s function that receives and handles ICMP packets (`icmp_rcv`). To trigger this function, we send an ICMP packet to the SEV VM. When the shell code calls the `call_usermodehelper` API, it creates a new process with root privileges that provides a root shell that listens on port 8001. Then, to interact with the spawned shell we connect to the VM from the hypervisor using `netcat`. We inject a total of 2891 #VCs to perform the page walk and inject 392 bytes of shell code. See the video below for a demo!
 
-<iframe width="100%" height="515" src="https://www.youtube-nocookie.com/embed/d5kdH-trg9o?si=cjyTu2Za81VnNmQ8"
+<iframe width="100%" height="515" src="https://www.youtube-nocookie.com/embed/d5kdH-trg9o?si=cjyTu2Za81VnNmQ8rel=0"
 style='margin-top: 2rem; margin-bottom: 2rem;'
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
