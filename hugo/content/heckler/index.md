@@ -20,7 +20,7 @@ seo:
 
 <div class='text-center' style='padding-bottom: 1rem;'>
 <div>
-   <img src="/heckler.png" class='w-10' style='margin-bottom: -1rem'>
+   <img src="/Heckler-symbol.svg" class='' style='margin-top: 2rem; margin-bottom: -1rem; width: 300px;'>
 </div>
 <h1 class='h1'>Heckler</h1>
 <p class="lead">Breaking Confidential VMs with Malicious Interrupts (to appear at <a href='https://www.usenix.org/conference/usenixsecurity24'>USENIX Security 2024</a>)</p>
@@ -30,11 +30,11 @@ seo:
       <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="/heckler/heckler_usenix24.pdf" role="button">Paper</a>
     </div>
   </div>
-<!-- <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem"> -->
-<!--     <div class="d-flex flex-column flex-sm-row" > -->
-<!--       <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="" role="button">Source</a> -->
-<!--     </div> -->
-<!--   </div> -->
+<div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
+    <div class="d-flex flex-column flex-sm-row" >
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="https://github.com/ahoi-attacks" role="button">Source</a>
+    </div>
+  </div>
 <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row" >
       <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="#cve" role="button">CVE</a>
