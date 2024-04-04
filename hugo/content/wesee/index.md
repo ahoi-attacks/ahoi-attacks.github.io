@@ -134,6 +134,13 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
   - No. WeSee is not a side-channel attack.
 {{< /details >}}
 
+{{< details "Q: What about other interrupt vectors?" >}}
+- In Heckler, we focused on using interrupt vectors with handlers that had
+global effects. Please see our [paper](/heckler/heckler_usenix24.pdf) for a
+detailed analysis of the other interrupt vectors.
+
+{{< /details >}}
+
 {{< details "Q: How is this an Ahoi attack?" >}}
   - WeSee uses interrupts, a notification mechanism, to compromise AMD SEV-SNP VMs making it an Ahoi attack. 
 {{< /details >}}
@@ -141,6 +148,23 @@ All SEV-SNP processors are vulnerable to WeSee. There is a hotfix in the Linux k
 {{< details "Q: Why the name WeSee?">}}
   - WeSee is a word-play on the VC exception.
 {{< /details >}}  
+
+
+{{< details "Q: What was the response from hardware manufacturers? " >}}
+
+- AMD acknowledged the attacks but concluded that this is a vulnerability in the third-party software implementations of SEV-SNP.
+
+{{< /details >}}
+
+
+{{< details "Q: What was the response from cloud vendors? " >}}
+
+- Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and Azure confidential VMs are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
+
+- Google and AWS thanked us for the disclosure and are investigating it. At the
+  moment, they have neither confirmed nor denied the issue.
+
+{{< /details >}}
 
 
 <!-- {{< details "Q: Am I affected?" >}}
