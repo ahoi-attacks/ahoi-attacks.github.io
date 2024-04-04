@@ -131,8 +131,7 @@ In summary, a malicious hypervisor can use Heckler to gain access to a shell (us
 
 ## Affected Hardware and Software
 
-All Intel TDX and AMD SEV-SNP processors are vulnerable to Heckler. There are
-for both of them. See our FAQs for more information.
+All Intel TDX and AMD SEV-SNP processors are vulnerable to Heckler. See our FAQs for more information.
 
 
 ## FAQ
