@@ -35,7 +35,7 @@ seo:
   </div>
 <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row" >
-      <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="hhttps://github.com/ahoi-attacks/WeSee" role="button">Source</a>
+      <a class="btn btn-primary btn-cta rounded-pill btn-lg head-button" href="https://github.com/ahoi-attacks/WeSee" role="button">Source</a>
     </div>
   </div>
 <div class="col-lg-5 col-sm-6  " style="margin-top: 1.2rem">
