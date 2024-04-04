@@ -113,17 +113,17 @@ the interrupt, we use the hypervisor’s ability to observe page faults.
 `mm_answer_authpassword` to compromise its return value.
 
 
-<iframe width="100%" height="515" src="https://www.youtube.com/embed/pQCvn9S1Jbc?si=oCL6dyuV6KqqCan9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="515" style='margin-top: 2rem; margin-bottom: 2rem;' src="https://www.youtube.com/embed/pQCvn9S1Jbc?si=oCL6dyuV6KqqCan9&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Sudo
 
 We demonstrate an attack on the sudo binary in the Ubuntu 23.10 distribution to get a root shell on the CVM. Specifically, an attacker with a non-root shell on the CVM can escalate privilege to a root shell using Heckler. 
 
 
-Like the openssh attack, we identify functions that lie on different pages. We observe the page trace in the hypervisor and use int 0x80 to compromise the return values leading to successful authentication. 
+Like the OpenSSH attack, we identify functions that lie on different pages. We observe the page trace in the hypervisor and use int 0x80 to compromise the return values leading to successful authentication. 
 
 
-<iframe width="100%" height="515"
+<iframe width="100%" height="515" style='margin-top: 2rem; margin-bottom: 2rem;'
 src="https://www.youtube.com/embed/Q9TEmhh6ufE?si=HSzBchc2gs8nv96B"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
