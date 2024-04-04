@@ -2,8 +2,8 @@
 title: "Embargo is Over. We are Live!"
 description: ""
 summary: ""
-date:    2024-04-01T00:00:00+00:00
-lastmod: 2024-04-01T16:27:22+00:00
+date: 2024-04-04T00:04:48+02:00
+lastmod: 2024-04-04T00:04:48+02:00
 draft: false
 weight: 50
 categories: []

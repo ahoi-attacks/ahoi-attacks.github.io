@@ -1,13 +1,13 @@
 # Hugo
 title = "Ahoi Attacks"
-description = "Disrupting TEEs with malicious notifications"
+description = "Ahoi Attacks are a family of attacks on Hardware-based Trusted execution environments (TEEs) to break AMD SEV-SNP and Intel TDX."
 images = ["cover.png"]
 
 # mainSections
 mainSections = ["heckler", "wesee", "media"]
 
 [social]
-  twitter = "getdoks"
+  twitter = "sectrs_ethz"
 
 # Doks (@hyas/doks-core)
 [doks]
@@ -129,7 +129,7 @@ mainSections = ["heckler", "wesee", "media"]
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Secure & Trustworthy Systems Group" # Name of Organization or Person
+    name = "Secure and Trustworthy Systems Group ETHZ" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
     images = ["cover.png"] # ["cover.png"] (default)
     article = ["heckler", "wesee", "blog/ahoi-overview"] # Article sections

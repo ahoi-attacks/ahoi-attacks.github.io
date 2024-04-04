@@ -1,9 +1,9 @@
 ---
-title: "Heckler: Breaking Confidential VMs with Malicious Interrupts"
-description: ""
-summary: ""
-date: 2023-09-07T16:04:48+02:00
-lastmod: 2023-09-07T16:04:48+02:00
+title: "Heckler"
+description: "Breaking Confidential VMs with Malicious Interrupts"
+summary: "Heckler: Breaking Confidential VMs with Malicious Interrupts"
+date: 2024-04-04T00:04:48+02:00
+lastmod: 2024-04-04T00:04:48+02:00
 draft: false
 menu:
   docs:
@@ -12,8 +12,8 @@ menu:
 weight: 810
 toc: true
 seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
+  title: "Heckler" # custom title (optional)
+  description: "Breaking Confidential VMs with Malicious Interrupts" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---

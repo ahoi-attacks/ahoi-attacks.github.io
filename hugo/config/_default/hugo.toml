@@ -1,5 +1,5 @@
 title = "Ahoi Attacks"
-baseurl = "/"
+baseurl = "https://ahoi-attacks.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
