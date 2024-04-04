@@ -19,13 +19,14 @@ seo:
 ---
 
 
-<div class='text-center' style='padding-bottom: 1rem;'>
+
+<div class='text-center' style='padding-bottom: 3rem;'>
 <div>
    <img src="/WeSee-symbol.svg" class='' style='margin-top: 3rem; margin-bottom: -1rem; width: 400px;'>
    <!-- <img src="/heckler.png" class='w-10' style='margin-bottom: -1rem'> -->
 </div>
 <h1 class='h1'>WeSee</h1>
-<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP (to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
+<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP <br/>(to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
@@ -112,7 +113,9 @@ This command spawns a root shell that takes as input all network data from port 
 
 We inject our shell code into the Linux kernel’s function that receives and handles ICMP packets (`icmp_rcv`). To trigger this function, we send an ICMP packet to the SEV VM. When the shell code calls the `call_usermodehelper` API, it creates a new process with root privileges that provides a root shell that listens on port 8001. Then, to interact with the spawned shell we connect to the VM from the hypervisor using `netcat`. We inject a total of 2891 #VCs to perform the page walk and inject 392 bytes of shell code. See the video below for a demo! 
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/d5kdH-trg9o?si=cjyTu2Za81VnNmQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="100%" height="515" src="https://www.youtube-nocookie.com/embed/d5kdH-trg9o?si=cjyTu2Za81VnNmQ8"
+style='margin-top: 2rem; margin-bottom: 2rem;'
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 In summary, a malicious hypervisor can use WeSee to compromise SEV-SNP VMs and gain root access. For more details on our attacks check out our [paper]([link](https://ahoi-attacks.github.io/wesee/wesee_oakland24.pdf)) and [code](https://github.com/ahoi-attacks/WeSee). 
 
@@ -158,3 +161,6 @@ We have responsibly disclosed our findings to AMD on 26 October 2023.
 WeSee is tracked under [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742).
 
 
+## Acknowledgments
+Thanks to AMD and Linux for the mitigation discussions and for
+developing the patches.
