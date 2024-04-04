@@ -57,7 +57,7 @@ WeSee abuses the #VC handler in the kernel to compromise the CVM with 2 main obs
 
 ### Bypass Authentication with WeSee
  Let's consider an application that writes an application key `key_app` into `rax` and then uses the value in `rax` to authenticate a user who enters an input key (`k_in`).
- ```
+ ```python
  rax = key_app
 if rax == k_in: 
 	auth
