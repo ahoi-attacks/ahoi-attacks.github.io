@@ -94,7 +94,20 @@
 
 {{ end }}
 {{ define "sidebar-footer" }}
-
+<style>
+ .quote-padding {
+   padding: 2rem;
+   /* background-color: red; */
+ }
+ @media only screen and (max-width: 600px) {
+   .quote-padding {
+     padding: 0rem;
+     /* background-color: blue; */
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+   }
+ }
+</style>
 <section class="section section-md container-fluid bg-light">
   <div class="container">
     <div class="row justify-content-center" style=''>
@@ -104,8 +117,7 @@
           <div class="card text-end w-100">
             <div class="card-body d-flex">
               <div class="d-flex flex-column me-auto text-start">
-                <div style='padding: 2rem;'>
-
+                <div style='' class='quote-padding'>
                   <blockquote style='padding-left: 2rem; padding-top: 0.3rem; padding-bottom: 0rem; ' >
                     <em>Defining</em>
                     <div style=''>
