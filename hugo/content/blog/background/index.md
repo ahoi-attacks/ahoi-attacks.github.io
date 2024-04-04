@@ -1,7 +1,7 @@
 ---
 title: "Overview of Ahoi Attacks"
 description: ""
-summary: "Background and Overview of Ahoi Attacks"
+summary: ""
 date: 2024-04-04T00:04:48+02:00
 lastmod: 2024-04-04T00:04:48+02:00
 draft: false
