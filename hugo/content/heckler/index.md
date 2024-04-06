@@ -223,8 +223,23 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
   Confidential Computing and Azure confidential VMs are not vulnerable because
   they use restricted and alternate injection modes supported by AMD SEV-SNP.
 
-- Google and AWS thanked us for the disclosure and are investigating it. At the
+- Google thanked us for the disclosure and is investigating it. At the
   moment, they have neither confirmed nor denied the issue.
+  
+- AWS thanked us for the disclosure and communicated the following:
+
+  - AWS is aware of [CVE-2024-25742](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25742), [CVE-2024-25743](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25743), and [CVE-2024-25744](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25744), which
+  describes issues related to AMD Secure Encrypted Virtualization-Secure Nested
+  Paging (SEV-SNP). These CVEs describe paths through which an untrusted
+  hypervisor can inject interrupts into a virtualized guest running in an
+  SEV-SNP environment to obtain data from the guest that it should not be able
+  to read. Amazon EC2 does not rely on AMD SEV-SNP, Intel TDX, or similar
+  affected technologies, to provide confidentiality and integrity protections to
+  customers. The built-in hardware and associated firmware for confidentiality
+  protections of the EC2 Nitro Systems are offered to all customers by default;
+  these components are not affected by these issues. To support customers
+  running Amazon Linux as virtualized guests using AMD SEV-SNP, we are working
+  to release a kernel addressing the CVEs in the next release cycle.
 
 {{< /details >}}
 
