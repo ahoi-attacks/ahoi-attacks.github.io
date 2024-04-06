@@ -6,3 +6,4 @@ tmp/
 hugo/public
 hugo/node_modules
 hugo/resources/_gen
+hugo/hugo_stats.json
