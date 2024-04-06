@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "<<<<<<",
       "a",
       "article",
       "audio",
@@ -283,7 +282,6 @@
       "breaking-into-cvms-with-wesee",
       "buttonColorMode",
       "bypass-authentication-with-wesee",
-      "case-studies",
       "confidential-computing",
       "cve",
       "exploiting-global-effects-of-handlers",
