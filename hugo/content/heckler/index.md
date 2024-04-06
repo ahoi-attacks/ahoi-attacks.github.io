@@ -222,9 +222,6 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 - Azure thanked us for the disclosure and communicated that both Azure
   Confidential Computing and Azure confidential VMs are not vulnerable because
   they use restricted and alternate injection modes supported by AMD SEV-SNP.
-
-- Google thanked us for the disclosure and is investigating it. At the
-  moment, they have neither confirmed nor denied the issue.
   
 - AWS thanked us for the disclosure and communicated the following:
 
@@ -240,6 +237,10 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
   these components are not affected by these issues. To support customers
   running Amazon Linux as virtualized guests using AMD SEV-SNP, we are working
   to release a kernel addressing the CVEs in the next release cycle.
+
+- Google thanked us for the disclosure and is investigating it. At the
+  moment, they have neither confirmed nor denied the issue.
+
 
 {{< /details >}}
 

@@ -26,7 +26,7 @@ seo:
    <!-- <img src="/heckler.png" class='w-10' style='margin-bottom: -1rem'> -->
 </div>
 <h1 class='h1'>WeSee</h1>
-<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP (to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
+<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP <br/> (to appear at <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
@@ -163,9 +163,6 @@ detailed analysis of the other interrupt vectors.
 {{< details "Q: What was the response from cloud vendors? " >}}
 
 - Azure thanked us for the disclosure and communicated that both Azure Confidential Computing and Azure confidential VMs are not vulnerable because they use restricted and alternate injection modes supported by AMD SEV-SNP.
-
-- Google thanked us for the disclosure and is investigating it. At the
-  moment, they have neither confirmed nor denied the issue.
   
 - AWS thanked us for the disclosure and communicated the following:
 
@@ -181,6 +178,10 @@ detailed analysis of the other interrupt vectors.
   these components are not affected by these issues. To support customers
   running Amazon Linux as virtualized guests using AMD SEV-SNP, we are working
   to release a kernel addressing the CVEs in the next release cycle.  
+
+- Google thanked us for the disclosure and is investigating it. At the
+  moment, they have neither confirmed nor denied the issue.
+
 
 {{< /details >}}
 
