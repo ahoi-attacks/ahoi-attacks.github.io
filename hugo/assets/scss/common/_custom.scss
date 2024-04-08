@@ -14,7 +14,10 @@
 }
 
 .head-button {
-    min-width: 15rem;
+    min-width: 14rem;
+    @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        min-width: 10rem;
+    }
 }
 
 .docs-content p a {

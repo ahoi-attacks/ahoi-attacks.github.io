@@ -14,7 +14,7 @@
 		</nav>
 		{{ end -}}
 		{{ if .Params.toc -}}
-		<div class='docs-content col-lg-0 col-xl-2'> </div>
+		<div class='docs-content col-lg-0 col-xl-2' style=''> </div>
 		<main class="docs-content col-lg-16 col-xl-9" style=''> <!--this-->
 		{{ else -}}
 		<main class="docs-content col-lg-11 col-xl-12 mx-xl-auto">
@@ -58,6 +58,7 @@
 			{{ end -}}
 			-->
 		</main>
+		<div class='docs-content col-lg-0 col-xl-2' style=''> </div>
 		{{ if and (eq site.Params.doks.containerBreakpoint "fluid") (in .Site.Params.mainSections .Type) }}
 			</div>
 		{{ end }}
