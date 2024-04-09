@@ -13,7 +13,7 @@
     "lint:styles": "stylelint --cache \"assets/scss/**/*.{css,sass,scss}\"",
     "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --minify",
+    "build": "exec-bin node_modules/.bin/hugo/hugo && exec-bin node_modules/.bin/hugo/hugo --minify",
     "preview": "http-server --gzip --brotli --ext=html --cors",
     "clean": "npm run clean:build && npm run clean:lint && npm run clean:install",
     "clean:build": "shx rm -rf public resources .hugo_build.lock",
@@ -38,7 +38,7 @@
     "shx": "^0.3.4"
   },
   "otherDependencies": {
-    "hugo": "0.123.7"
+    "hugo": "0.124.1"
   },
   "overrides": {
     "semver": "^7.5.4"

@@ -3,6 +3,7 @@ baseurl = "https://ahoi-attacks.github.io/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
+timeout = 120
 # disableKinds = ["taxonomy", "term"]
 enableEmoji = true
 enableGitInfo = false

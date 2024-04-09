@@ -17,3 +17,7 @@ dev:
 .PHONY:
 build:
 	cd "$(PROJ_ROOT)/hugo" && npm run build
+
+.PHONY:
+clean:
+	git clean -fdx
