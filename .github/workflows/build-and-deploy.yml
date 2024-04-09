@@ -26,7 +26,7 @@ jobs:
         make init
         make build
   
-    - name: deploy to github pages
+    - name: commit to github pages
       uses: peaceiris/actions-gh-pages@v4
       # If you're changing the branch from main,
       # also change the `master` in `refs/heads/master`
