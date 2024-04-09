@@ -154,7 +154,7 @@ detailed analysis of the other interrupt vectors.
 
 {{< details "Q: What was the response from hardware manufacturers? " >}}
 
-- AMD acknowledged the attacks but concluded that this is a vulnerability in the third-party software implementations of SEV-SNP.
+- AMD acknowledged the attacks but concluded that this is a vulnerability in the third-party software implementations of SEV-SNP. You find more information in their [security advisory](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3008.html).
 
 {{< /details >}}
 

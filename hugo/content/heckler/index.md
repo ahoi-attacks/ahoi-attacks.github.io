@@ -212,6 +212,7 @@ interrupts the VM execution, acting like a “heckler” during a CVM execution.
 
 - Intel and AMD acknowledged the attacks but concluded that this is a
   vulnerability in the third-party software implementations of SEV-SNP and TDX.
+  You find more information in their respective security advisories ([Intel](https://www.intel.com/content/www/us/en/security-center/announcement/intel-security-announcement-2024-04-08-001.html), [AMD](https://www.amd.com/en/resources/product-security/bulletin/amd-sb-3008.html)).
 
 {{< /details >}}
 
