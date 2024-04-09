@@ -71,11 +71,11 @@ mainSections = ["heckler", "wesee", "media"]
   imageSingle = true # true (default) or false
 
   # Repository
-  editPage = true # false (default) or true
-  lastMod = true # false (default) or true
-  repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/ahoi-attacks/ahoi-attacks.github.io"
-  docsRepoBranch = "gh-pages" # main (default), master, or <branch name>
+  editPage = false # false (default) or true
+  lastMod = false # false (default) or true
+  repoHost = "" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+  docsRepo = ""
+  docsRepoBranch = "" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 
   # SCSS colors
