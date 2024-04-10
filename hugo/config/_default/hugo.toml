@@ -4,7 +4,7 @@ canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 timeout = 120
-# disableKinds = ["taxonomy", "term"]
+disableKinds = []
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
@@ -53,9 +53,9 @@ copyRight = "Copyright (c) Secure & Trustworthy System Group"
     maxAge = -1 # "30m"
 
 [taxonomies]
-  contributor = "contributors"
-  category = "categories"
-  tag = "tags"
+  # contributor = "contributors"
+  # category = "categories"
+  # tag = "tags"
 
 [permalinks]
   blog = "/blog/:slug/"
