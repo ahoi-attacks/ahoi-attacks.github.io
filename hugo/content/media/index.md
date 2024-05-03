@@ -12,6 +12,8 @@ Ahoi Attacks in the News:
   
 - ETH News Article (German): [Die Cloud-Sicherheit aus dem Konzept gebracht](https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2024/04/die-cloud-sicherheit-aus-dem-konzept-gebracht.html)
 
+- Sciena (French): [La sécurité de l'informatique en nuage à l'épreuve des faits](https://www.sciena.ch/fr/research/knocking-cloud-security-off-its-game.html)
+
 - Tech Xplore: [Computer scientists discover gap in the latest security mechanisms used by some chips
 ](https://techxplore.com/news/2024-04-scientists-gap-latest-mechanisms-chips.html)
 
