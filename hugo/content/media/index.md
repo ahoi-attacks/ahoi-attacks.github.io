@@ -8,7 +8,8 @@ toc: false
 
 Ahoi Attacks in the News:
 
-- ETH News Article: [Knocking cloud security off its game](https://ethz.ch/en/news-und-veranstaltungen/eth-news/news/2024/04/knocking-cloud-security-off-its-game.html) 
+- ETH News Article: [Knocking cloud security off its game](https://ethz.ch/en/news-und-veranstaltungen/eth-news/news/2024/04/knocking-cloud-security-off-its-game.html)
+  
 - ETH News Article (German): [Die Cloud-Sicherheit aus dem Konzept gebracht](https://ethz.ch/de/news-und-veranstaltungen/eth-news/news/2024/04/die-cloud-sicherheit-aus-dem-konzept-gebracht.html)
 
 - Tech Xplore: [Computer scientists discover gap in the latest security mechanisms used by some chips
@@ -23,5 +24,7 @@ Ahoi Attacks in the News:
 - SC Magazine: [Novel Ahoi attacks could compromise confidential VMs](https://www.scmagazine.com/brief/novel-ahoi-attacks-could-compromise-confidential-vms)
 
 - IT Security Wire:  [New Ahoi Attack Compromises Confidential VMs, Researchers Target Major Tech with Findings](https://itsecuritywire.com/quick-bytes/new-ahoi-attack-compromises-confidential-vms-researchers-target-major-tech-with-findings/)
+  
+- Zürich Information Security and Privacy Center: [Ahoi Attacks: Disrupting TEEs with malicious Notifications](https://zisc.ethz.ch/2024/05/02/ahoi-attacks-disrupting-tees-with-malicious-notifications/)
 
 
