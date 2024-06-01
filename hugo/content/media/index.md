@@ -29,4 +29,6 @@ Ahoi Attacks in the News:
   
 - Zürich Information Security and Privacy Center: [Ahoi Attacks: Disrupting TEEs with malicious Notifications](https://zisc.ethz.ch/2024/05/02/ahoi-attacks-disrupting-tees-with-malicious-notifications/)
 
+- Tech Times: [Cloud Server Vulnerability Found in AMD and Intel Chips, Computer Scientists Warn](https://www.techtimes.com/articles/304433/20240508/cloud-server-vulnerability-found-amd-intel-chips-computer-scientists-warn.htm)
+
 
