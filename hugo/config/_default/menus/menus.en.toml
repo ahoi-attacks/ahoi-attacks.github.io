@@ -32,6 +32,12 @@
   weight = 20
 
 [[main]]
+  name = "Sigy"
+  identifier = "sigy"
+  url = "/sigy"
+  weight = 30  
+
+[[main]]
   name = "Blog"
   url = "/blog/"
   weight = 40

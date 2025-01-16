@@ -4,7 +4,7 @@ description = "Ahoi Attacks is a family of attacks on Hardware-based Trusted exe
 images = ["preview.png?123456"]
 
 # mainSections
-mainSections = ["heckler", "wesee", "media"]
+mainSections = ["heckler", "wesee", "sigy", "media"]
 
 [social]
   twitter = "sectrs_ethz"
