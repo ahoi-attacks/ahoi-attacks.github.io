@@ -32,3 +32,7 @@ Ahoi Attacks in the News:
 - Tech Times: [Cloud Server Vulnerability Found in AMD and Intel Chips, Computer Scientists Warn](https://www.techtimes.com/articles/304433/20240508/cloud-server-vulnerability-found-amd-intel-chips-computer-scientists-warn.htm)
 
 
+## Talks and Recordings
+
+- [Heckler: Usenix Security'24](https://www.youtube.com/watch?v=6lWIYP90dws)
+- [WeSee: IEEE S&P'24](https://www.youtube.com/watch?v=dCaUoYaAq5U)
