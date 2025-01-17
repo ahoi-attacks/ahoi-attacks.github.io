@@ -23,7 +23,7 @@ seo:
    <img src="/Sigy-symbol.svg" class='' style='margin-top: 2rem; margin-bottom: -1rem; width: 300px;'>
 </div>
 <h1 class='h1'>Sigy</h1>
-<p class="lead">Breaking Intel SGX Enclaves with Malicious Exceptions & Signals </br> (<a href=''>Asia CCS 2025</a>)</p>
+<p class="lead">Breaking Intel SGX Enclaves with Malicious Exceptions & Signals </br> (To appear at <a href='https://asiaccs2025.hust.edu.vn/'>Asia CCS 2025</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
