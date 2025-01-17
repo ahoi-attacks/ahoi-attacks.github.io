@@ -1,5 +1,5 @@
 ---
-title: "Most Innovative Research Pwnie Award Nominee 2024"
+title: "DEF CON 32: Most Innovative Research Pwnie Award Nominee"
 description: ""
 summary: ""
 date: 2024-08-11T00:04:48+02:00
