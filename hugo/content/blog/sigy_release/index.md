@@ -18,7 +18,10 @@ seo:
 ---
 
 
-We are happy to announce that Sigy is accepted in ACM Asia CCS 2025. Sigy another instance of an Ahoi Attack, compromises Intel SGX enclaves by using a malicious OS to arbitrary inject signals.
+We are happy to announce that our research paper, [Sigy: Breaking Intel SGX Enclaves with Malicious Exceptions & Signals](/sigy) has been accepted at ACM Asia CCS 2025.
 
-- [Sigy, Breaking Intel SGX Enclaves with Malicious Exceptions & Signals](/sigy)
-- [Asia CCS 2025](https://asiaccs2025.hust.edu.vn/)
+Sigy, another instance of an Ahoi Attack, demonstrates how a malicious OS can compromise Intel SGX enclaves by arbitrarily injecting signals.
+
+We’re excited to share our findings at Asia CCS 2025. Until then, happy hacking!
+
+- [ACM AsiaCCS 2025](https://asiaccs2025.hust.edu.vn/)

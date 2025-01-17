@@ -7,7 +7,7 @@ lastmod: 2024-05-20T00:00:00+00:00
 draft: false
 weight: 50
 contributors: []
-tags: ["wesee"]
+tags: []
 pinned: false
 homepage: false
 slug: wesee-distinguished-paper-award24
@@ -19,3 +19,6 @@ seo:
 ---
 
 
+Our research paper [WeSee](/wesee) has received the IEEE S&P Distinguished Paper Award! We're proud to see our work recognized and thank everyone who supported us on this journey. Stay tuned for more updates!
+
+- [IEEE S&P'24 Distinguished Paper Awards](https://sp2024.ieee-security.org/awards.html)
