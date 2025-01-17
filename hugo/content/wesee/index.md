@@ -25,7 +25,7 @@ seo:
    <!-- <img src="/heckler.png" class='w-10' style='margin-bottom: -1rem'> -->
 </div>
 <h1 class='h1'>WeSee</h1>
-<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP <br/> (<a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
+<p class="lead">Using Malicious #VC Interrupts to Break AMD SEV-SNP <br/> (Distinguished Paper Award, <a href='https://sp2024.ieee-security.org/'>IEEE S&P 2024</a>)</p>
 <div class="row justify-content-center">
   <div class="col-lg-5 col-sm-6  text-center  go-button" style="margin-top: 1.2rem">
     <div class="d-flex flex-column flex-sm-row w-100 text-center">
