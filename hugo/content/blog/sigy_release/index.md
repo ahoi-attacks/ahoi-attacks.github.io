@@ -20,5 +20,7 @@ seo:
 
 We are happy to announce that Sigy is accepted in ACM Asia CCS 2025.
 
+Sigy another instance of an Ahoi Attack, compromises Intel SGX enclaves by using a malicious OS to arbitrary inject signals.
+
 - [Sigy, Breaking Intel SGX Enclaves with Malicious Exceptions & Signals](/sigy)
 - [Asia CCS 2025](https://asiaccs2025.hust.edu.vn/)
