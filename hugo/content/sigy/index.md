@@ -142,7 +142,7 @@ We informed all the 7 impacted runtimes and library OSes from September 2023 to 
 
 ## CVE
 Sigy is tracked under the following CVEs:
-- [CVE-2024-2537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-2537)
+- [CVE-2024-25371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25371)
 - [CVE-2024-29971](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29971)
 - [CVE-2024-29970](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-29970)
 
