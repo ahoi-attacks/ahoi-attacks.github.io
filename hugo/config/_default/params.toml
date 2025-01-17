@@ -1,6 +1,6 @@
 # Hugo
 title = "Ahoi Attacks"
-description = "Ahoi Attacks is a family of attacks on Hardware-based Trusted execution environments (TEEs) to break AMD SEV-SNP and Intel TDX."
+description = "Ahoi Attacks is a family of attacks on Hardware-based Trusted execution environments (TEEs) to break AMD SEV-SNP, Intel TDX and Intel SGX."
 images = ["preview.png?123456"]
 
 # mainSections
